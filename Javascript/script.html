@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Examples</title>
+    <style>
+      /*This is CSS comment*/
+    </style>
+    <!-- <script src="file://wsl.localhost/Ubuntu/home/vasanth011/wd101/html-css/Javascript/passphrase (1).js"></script> -->
+    <!-- <script src="\\wsl.localhost\Ubuntu\home\vasanth011\wd101\html-css\Javascript\initialsFromName.js"></script> -->
+  </head>
+  <body>
+    <p>
+      Go to inspect > click on console > refresh the page to see the Javascript
+      code output
+
+      <!-- html comment -->
+    </p>
+    <script>
+      let a = "N ";
+      let b = "Vasanth";
+      console.log("Using + operator", a + b);
+      console.log("Using concat method od string", a.concat(b));
+      console.log(
+        "This is same to test whether it updates or not in the console tab"
+      );
+      //Single Line Comment
+      /*JS Multiline Comment*/
+
+      let password = "vasanth011";
+      if (password.length >= 8) {
+        console.log("Password is at good length");
+      } else {
+        console.log("Please enter atleast 8 characters");
+      }
+
+      // here the includes method is case-sensitive that vasanth and VASANTH has some difference over here right!
+      if (password.includes("8")) {
+        console.log("It Exists");
+      } else {
+        console.log("No");
+      }
+
+      // here we are extracting username from gmail account
+      let gmail = "nimmalavasanth@gmail.com";
+
+      i = 0;
+      while ("@" != gmail[i]) {
+        i += 1;
+      }
+
+      console.log(gmail.substring(0, i));
+
+      // string equality operator(===)
+      if (password === "vasanth011") {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+
+      // sort a list of strings in their alphabetic order
+      //let array = ["vasanth", "musk", "stark", "khalid"];
+      let array = ["jacob", "hari", "jasim"];
+      array.sort(); // here sort method changes the array and returns the array. it is called in-place sort
+      console.log(array);
+
+      // splitting large string into small
+      let string = "nimmalavasanthsai@gmail.com";
+      let gmailDetails = string.split("@");
+      console.log(gmailDetails);
+
+      // here we adding a number to string but it adds like a string
+      // later one converts from string to number then it adds
+      let add1 = 21 + "20";
+      console.log(typeof add1);
+      let add2 = Number("20") + 21;
+
+      console.log("add1: " + add1);
+      console.log("add2: " + add2);
+
+      let radius = 10;
+
+      let area1 = 3.14 * Math.pow(radius, 2);
+      let area2 = Math.PI * Math.pow(radius, 2);
+      console.log(area1, area2);
+
+      let str = "hello ".concat(55);
+      console.log(str);
+
+      console.log(isNaN("code"));
+
+      let random = () => {
+        console.log(5 + 5);
+      };
+
+      // settimeout calls the function once the time expires
+      let tid = setTimeout(random, 1000);
+      // clearTimeout(tid1);    // used to terminate the operation before executing the function in given period
+
+      // this setInterval function calls the function repeated in every given period
+      // until you call the clearInterval function in interval ID to terminate
+      //let intervelID = setInterval(random, 2000);
+
+      // without return it returns undefined
+      let add = (x, y) => {
+        return x + y;
+      };
+      console.log(add(100, 100));
+
+      // foreach passes each value from qwert to ade function until it is empty
+      let qwert = [1, 2, 3, 4, 5, 6];
+      let s = 0;
+      let ade = (val) => s = s+val;
+      qwert.forEach(ade);
+      console.log(s);
+    </script>
+  </body>
+</html>

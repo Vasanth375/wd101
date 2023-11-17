@@ -1,0 +1,30 @@
+<script>
+    console.log([-1,1,3,4,-5].filter((item)=>{
+        return item>0
+    }).length)
+
+    // localStorage.setItem('name','Chris');
+    // let myName = localStorage.getItem('name');
+    // console.log(myName);
+    
+    // localStorage.setItem('name','Chris');
+    // localStorage.removeItem('name');
+    // let myName = localStorage.getItem('name');
+    // console.log(myName);
+
+    // const user = { name: "Myra", age: 40, city: "Bengaluru" };
+    // let userJson = JSON.stringify(user);
+    // console.log(userJson);
+
+    // let names = ["John", "Peter", "Sally", "Jane"];
+    // let namesJson = JSON.stringify(names);
+    // console.log(namesJson);
+
+const userJson = '{name: "Myra", age: 40, city: "Bengaluru"}';
+let user = JSON.parse(userJson);
+console.log(typeof(user));
+
+
+
+    
+</script>

@@ -1,0 +1,27 @@
+<ul id="mill"></ul>
+
+<script>
+let str = "Vasanth";
+console.log(str.split("").reverse().join(""));
+
+let arr = ["Elon", "Iron", "Tom", "Osc"]
+let reverse = item => item.split("").reverse().join("")
+
+console.log(arr.map(reverse))
+
+let itemHTMl = item => `<li>${item}</li>`
+
+// map doesn't mdifies the original array and it returns the modified array
+let result = arr.map(itemHTMl)
+
+document.getElementById("mill").innerHTML = arr;
+
+// // Quiz
+// console.log([1,2,3,4,5].map((item)=>{
+//     let x = item * item;
+//     let y = item + item;
+//     return (2*x)/y;
+// }).length)
+
+
+</script>

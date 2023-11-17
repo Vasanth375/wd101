@@ -1,0 +1,36 @@
+<p>List of car names</p>
+<ul id="cars">
+
+</ul>
+
+<script>
+    // here Array operations and methods it uses
+    let list = ["BMW", "Lambhorgini", "RR", "Audi E-tron"];
+    let result =[];
+
+    let html = (val) => {
+        result.push(`<li>${val}</li>`);
+    };
+
+    list.forEach(html);
+    result = result.join("\n");
+    document.getElementById("cars").innerHTML = result;
+
+    result = result.split("\n")
+    result.unshift("<li>Benz</li>")
+    result.unshift("<li>DAO</li>")
+    document.getElementById("cars").innerHTML = result.join('\n');
+
+    // getting an index using foreach function
+    let sum = 0;
+    [10,20,30].forEach((val, ind) =>{
+        sum+=val;
+    })
+    console.log(sum);
+
+    // quiz problem
+    let arr = [[0,1,2,3],[4,5,6],[7,8,9]]
+    sum = 0
+    arr.forEach((item,i)=>item.forEach((item,index)=>sum+=i))
+    console.log(sum);
+</script>
